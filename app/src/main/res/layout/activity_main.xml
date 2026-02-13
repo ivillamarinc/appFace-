@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <!-- TÍTULO -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="ML Kit Codelab"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- BOTONES -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnGaleria"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:outlineAmbientShadowColor="#786161"
+            android:outlineSpotShadowColor="#E75353"
+            android:shadowColor="#BA4848"
+            android:text="Galería"
+            android:textColor="#F6F3F3"
+            android:textColorHighlight="#E22020"
+            android:textColorHint="#CA2121"
+            android:textColorLink="#673AB7"
+            android:textSize="8sp"
+            app:rippleColor="#E91E63"
+            app:strokeColor="#765E5E" />
+
+        <Button
+            android:id="@+id/btnCamara"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Cámara"
+            android:textSize="8sp" />
+
+        <Button
+            android:id="@+id/btnOCR"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="OCR"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnBarcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Barcode"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+
+    <!-- IMAGEN -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:scaleType="fitCenter"
+        android:background="#E0E0E0"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- RESULTADO -->
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Resultado"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:background="#F5F5F5"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
